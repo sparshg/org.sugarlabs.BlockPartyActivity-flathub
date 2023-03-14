@@ -1,0 +1,25 @@
+diff --git a/activity/activity.info b/activity/activity.info
+index 6e4ff29..d9b7084 100644
+--- a/activity/activity.info
++++ b/activity/activity.info
+@@ -1,10 +1,18 @@
+ [Activity]
+ name = BlockParty
+-bundle_id = org.laptop.BlockPartyActivity
++bundle_id = org.sugarlabs.BlockPartyActivity
++release_date = 2009-11-6
+ exec = sugar-activity3 BlockPartyActivity.BlockPartyActivity
+ icon = activity-blockparty
+ activity_version = 11
+ license = MIT
+ show_launcher = yes
+-repository = https://github.com/sugarlabs/block-party-activity
++metadata_license = CC0-1.0
++repository = https://github.com/sugarlabs/block-party-activity.git
+ summary = Blocks arrangement game
++description = Strategically rotate, move, and drop the blocks. Attempt to clear as many lines as possible by completing horizontal rows of blocks without empty space.
++url = https://github.com/sugarlabs/block-party-activity.git
++tags = Game
++update_contact = tch@sugarlabs.org
++developer_name = Sugar Labs Community
++screenshots = https://raw.githubusercontent.com/sugarlabs/block-party-activity/master/screenshots/en/3.jpg

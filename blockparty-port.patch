@@ -1,0 +1,38 @@
+diff --git a/BlockPartyActivity.py b/BlockPartyActivity.py
+index 7d7d178..2e48b42 100644
+--- a/BlockPartyActivity.py
++++ b/BlockPartyActivity.py
+@@ -33,22 +33,23 @@ from BlockParty import BlockParty
+ from sugar3.activity import activity
+ from sugar3.graphics import style
+ from sugar3.graphics.toolbarbox import ToolbarBox
+-from sugar3.activity.widgets import ActivityButton
+ from sugar3.activity.widgets import TitleEntry
+ from sugar3.activity.widgets import StopButton
+ from sugar3.activity.widgets import ShareButton
+ from sugar3.activity.widgets import DescriptionItem
+ from sugar3.activity.activity import get_activity_root
++from sugarapp.widgets import SugarCompatibleActivity
++from sugarapp.widgets import ExtendedActivityToolbarButton
+ 
+-class BlockPartyActivity(activity.Activity):
++class BlockPartyActivity(SugarCompatibleActivity):
+     def __init__(self, handle):
+-        activity.Activity.__init__(self, handle)
++        SugarCompatibleActivity.__init__(self, handle)
+ 
+         self.max_participants = 1
+ 
+         toolbar_box = ToolbarBox()
+ 
+-        activity_button = ActivityButton(self)
++        activity_button = ExtendedActivityToolbarButton(self)
+         toolbar_box.toolbar.insert(activity_button, 0)
+         activity_button.show()
+ 
+@@ -91,4 +92,4 @@ class BlockPartyActivity(activity.Activity):
+ 
+     def close(self, **kwargs):
+         self.block_party.close()
+-        activity.Activity.close(self, **kwargs)
++        SugarCompatibleActivity.close(self, **kwargs)
